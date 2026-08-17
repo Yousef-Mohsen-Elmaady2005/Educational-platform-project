@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>وصل أهدافك للتدريب</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/all.css">
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { cairo: ['Cairo', 'sans-serif'] },
+          colors: { brand: '#00b994', ink: '#182373' }
+        }
+      }
+    }
+  </script>
+  <style>
+    header a[href^="https://wa.me/"] { z-index: 10; }
+    
+    /* تخصيص ستايل Owl Carousel لشركائنا لمنع قطع الحدود والظلال عند التحويم (Hover) */
+    .partners-carousel .owl-stage-outer,
+    .credits-carousel .owl-stage-outer {
+      padding: 16px 6px !important;
+      margin: -16px -6px !important;
+    }
+    .partners-carousel .partner-card img,
+    .credits-carousel .partner-card img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+    }
+    .partners-carousel .owl-dots {
+      margin-top: 2rem !important;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .partners-carousel .owl-dots .owl-dot span {
+      width: 10px !important;
+      height: 10px !important;
+      margin: 0 !important;
+      background: #e2e8f0 !important;
+      transition: background 0.3s ease;
+    }
+    .partners-carousel .owl-dots .owl-dot.active span {
+      background: #00b994 !important;
+    }
+    
+    /* منع تمدد صور المدربين الدائرية */
+    .trainers-carousel .owl-item img {
+      width: auto !important;
+      display: inline-block;
+    }
+    .site-footer {
+      background: transparent;
+    }
+    .site-footer::before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      inset: 0 0 auto;
+      height: 96px;
+      background: #f5f7fa;
+      clip-path: ellipse(60% 100% at 50% 100%);
+      pointer-events: none;
+    }
+    .site-footer::after {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      top: 54px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: #f5f7fa;
+      pointer-events: none;
+    }
+    @media (max-width: 640px) {
+      .site-footer::before {
+        height: 82px;
+        clip-path: ellipse(75% 100% at 50% 100%);
+      }
+      .site-footer::after { top: 45px; }
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden bg-white font-cairo">
+  <!-- START of Hero Section -->
+  <header id="top" class="relative isolate flex min-h-screen flex-col overflow-hidden bg-[#174b70] text-white">
+    <!-- Background image + overlay asset -->
+    <img src="photo/hero section.jpg" alt="" class="absolute inset-0 -z-30 h-full w-full object-cover object-[center_38%]" aria-hidden="true">
+    <div class="absolute inset-0 -z-20 bg-[#0d385d]/30"></div>
+    <img src="photo/overfloow.png" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover opacity-85" aria-hidden="true">
+
+    <!-- top decorative transparent waves -->
+    <div class="pointer-events-none absolute inset-x-0 top-0 h-40 -z-10 overflow-hidden opacity-35" aria-hidden="true">
+      <div class="absolute -left-20 -top-24 h-40 w-[64%] rotate-[-9deg] rounded-[100%] bg-[#b8a3e8]"></div>
+      <div class="absolute -right-20 -top-24 h-44 w-[70%] rotate-[9deg] rounded-[100%] bg-[#bbd6dd]"></div>
+      <div class="absolute left-[19%] top-8 h-24 w-[60%] -rotate-[8deg] rounded-[100%] bg-[#7292cf]"></div>
+    </div>
+
+    <div class="mx-auto w-full max-w-[1410px] px-4 xl:px-0">
+      <div class="hidden md:flex h-[52px] w-full items-center justify-between border-b border-white/25 text-[13px] font-medium text-white/90">
+        <div class="order-2 flex items-center gap-4 mr-auto md:mr-0" dir="ltr">
+          <a href="#" aria-label="Instagram" class="transition hover:text-brand"><i class="fa-brands fa-instagram text-[18px]"></i></a>
+          <a href="#" aria-label="Twitter" class="transition hover:text-brand"><i class="fa-brands fa-twitter text-[18px]"></i></a>
+          <a href="#" aria-label="Snapchat" class="transition hover:text-brand"><i class="fa-brands fa-snapchat text-[18px]"></i></a>
+          <a href="#" aria-label="WhatsApp" class="transition hover:text-brand"><i class="fa-brands fa-whatsapp text-[18px]"></i></a>
+          <span class="flex h-6 w-6 items-center justify-center rounded-full bg-white text-[11px] font-bold text-ink">EN</span>
+        </div>
+        <div class="order-1 hidden items-center gap-4 lg:gap-6 md:flex pr-[130px]">
+          <a href="#" class="cursor-pointer inline-flex items-center justify-center hover:bg-brand/90 text-white px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-300 shadow-md hover:-translate-y-0.5">
+            هل لديك اي سؤال ؟
+          </a>
+          <a href="tel:920004785" class="flex items-center gap-1.5 font-sans transition hover:text-brand">
+            <i class="fa-solid fa-phone text-[12px] opacity-80"></i>
+            <span>920004785</span>
+          </a>
+          <a href="https://maps.google.com/?q=المملكة+العربية+السعودية" target="_blank" rel="noopener noreferrer" class="hidden lg:flex items-center gap-1.5 transition hover:text-brand">
+            <i class="fa-solid fa-location-dot text-[12px] opacity-80"></i>
+            <span>المملكة العربية السعودية</span>
+          </a>
+          <a href="mailto:info@thimpress.com" class="flex items-center gap-1.5 font-sans transition hover:text-brand">
+            <i class="fa-solid fa-envelope text-[12px] opacity-80"></i>
+            <span>info@thimpress.com</span>
+          </a>
+        </div>
+      </div>
+
+      <nav class="relative flex h-16 md:h-[78px] items-center justify-between" aria-label="التنقل الرئيسي">
+        <a href="#" class="order-1 relative z-10 mt-0 md:-mt-[52px] flex h-[105px] w-[85px] md:h-[135px] md:w-[114px] shrink-0 flex-col items-center justify-center bg-white rounded-b-[15px] md:rounded-b-[20px] shadow-md pb-2 pt-2 px-1 md:pb-4 md:pt-3 md:px-2 self-start" aria-label="وصل أهدافك للتدريب">
+          <img src="photo/Mask Group 12 (1).png" alt="وصل أهدافك للتدريب" class="h-[75px] w-[65px] md:h-[96px] md:w-[85px] object-contain">
+        </a>
+        <div class="order-2 hidden items-center gap-4 xl:gap-8 text-[13px] xl:text-sm font-medium lg:flex">
+          <a href="#" class="relative font-bold after:absolute after:-bottom-[10px] after:right-1/2 after:h-[3px] after:w-6 after:translate-x-1/2 after:rounded-full after:bg-white">الرئيسية</a>
+          <a href="aboutus.html" class="transition hover:text-brand">من نحن</a>
+          <a href="#" class="transition hover:text-brand">الدورات</a>
+          <a href="#" class="transition hover:text-brand">المدربين</a>
+          <a href="#" class="transition hover:text-brand">المدونة</a>
+          <a href="#" class="transition hover:text-brand">التوظيف</a>
+          <a href="#" class="transition hover:text-brand">تواصل معنا</a>
+          <button aria-label="بحث" class="hidden transition hover:text-brand sm:block">
+  <i class="fa-solid fa-magnifying-glass h-4 w-4"></i>
+  </button>
+        </div>
+        <div class="order-3 flex items-center gap-4 xl:gap-6 text-[13px] xl:text-sm">
+          <div class="hidden items-center gap-2 sm:flex">
+            <span class="flex h-6 w-6 items-center justify-center rounded-full border border-white/80 text-white">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="3"/>
+                <path d="M5 21c0-4 3-6 7-6s7 2 7 6"/>
+              </svg>
+            </span>
+            <a href="#" class="transition hover:text-brand">Mohamed ali</a>
+            <i class="fa-solid fa-chevron-down text-[10px]"></i>
+          </div>
+          <button aria-label="فتح القائمة" class="lg:hidden transition hover:text-brand">
+            <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 7h16M4 12h16M4 17h16"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <div class="mx-auto flex flex-1 w-full max-w-4xl flex-col justify-center px-4 sm:px-10 relative">
+      <div class="owl-carousel owl-theme hero-carousel" dir="ltr">
+        <!-- Slide 1 -->
+        <div class="w-full text-center px-6 pt-20 md:pt-10 pb-20 md:pb-28 sm:px-10">
+          <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight md:leading-relaxed drop-shadow-sm text-white">مركز وصول اضافي</h1>
+          <p class="mt-4 max-w-2xl text-xs sm:text-sm md:text-base font-medium leading-relaxed md:leading-8 text-white/95 mx-auto">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربي، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التي يولدها التطبيق.</p>
+          <a href="#" class="mt-8 md:mt-12 lg:mt-14 inline-block min-w-36 rounded-full bg-white px-9 py-2.5 text-sm font-semibold text-[#666] shadow-lg transition hover:-translate-y-0.5 hover:bg-brand hover:text-white">سجل الآن</a>
+        </div>
+        <!-- Slide 2 -->
+        <div class="w-full text-center px-6 pt-20 md:pt-10 pb-20 md:pb-28 sm:px-10">
+          <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight md:leading-relaxed drop-shadow-sm text-white">تعلم بلا حدود للمستقبل</h1>
+          <p class="mt-4 max-w-2xl text-xs sm:text-sm md:text-base font-medium leading-relaxed md:leading-8 text-white/95 mx-auto">هنا نساعدك للوصول إلى أهدافك التدريبية والمهنية بكل سهولة ويسر عبر باقة من أفضل البرامج التدريبية المعتمدة والمحاضرين المتميزين.</p>
+          <a href="#" class="mt-8 md:mt-12 lg:mt-14 inline-block min-w-36 rounded-full bg-white px-9 py-2.5 text-sm font-semibold text-[#666] shadow-lg transition hover:-translate-y-0.5 hover:bg-brand hover:text-white">سجل الآن</a>
+        </div>
+        <!-- Slide 3 -->
+        <div class="w-full text-center px-6 pt-20 md:pt-10 pb-20 md:pb-28 sm:px-10">
+          <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight md:leading-relaxed drop-shadow-sm text-white">طوّر مهاراتك القيادية والمهنية</h1>
+          <p class="mt-4 max-w-2xl text-xs sm:text-sm md:text-base font-medium leading-relaxed md:leading-8 text-white/95 mx-auto">احصل على تدريب متميز وشهادات معتمدة محلياً ودولياً تفتح لك آفاقاً جديدة في سوق العمل وتدعم نموك الوظيفي.</p>
+          <a href="#" class="mt-8 md:mt-12 lg:mt-14 inline-block min-w-36 rounded-full bg-white px-9 py-2.5 text-sm font-semibold text-[#666] shadow-lg transition hover:-translate-y-0.5 hover:bg-brand hover:text-white">سجل الآن</a>
+        </div>
+      </div>
+
+      <!-- Custom Hero Dots -->
+      <div id="hero-custom-dots" class="mt-4 md:mt-6 flex items-center justify-center gap-3.5" aria-label="مؤشرات الشرائح">
+        <button type="button" data-index="0" class="h-3.5 w-3.5 rounded-full bg-brand -translate-y-[7px] border border-white transition-all duration-300 focus:outline-none"></button>
+        <button type="button" data-index="1" class="h-3.5 w-3.5 rounded-full bg-white transition-all duration-300 focus:outline-none"></button>
+        <button type="button" data-index="2" class="h-3.5 w-3.5 rounded-full bg-white transition-all duration-300 focus:outline-none"></button>
+      </div>
+    </div>
+
+    <button id="hero-prev-btn" aria-label="الشريحة السابقة" class="absolute left-4 xl:left-[7%] top-1/2 -translate-y-1/2 hidden h-12 w-12 items-center justify-center rounded-full bg-white text-ink shadow-lg transition hover:scale-105 sm:flex"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m14 6-6 6 6 6M8 12h10"/></svg></button>
+    <button id="hero-next-btn" aria-label="الشريحة التالية" class="absolute right-4 xl:right-[7%] top-1/2 -translate-y-1/2 hidden h-12 w-12 items-center justify-center rounded-full bg-white text-brand shadow-lg transition hover:scale-105 sm:flex"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m10 6 6 6-6 6m6-6H6"/></svg></button>
+    <a href="https://wa.me/966920004785" target="_blank" rel="noopener noreferrer" aria-label="تواصل معنا عبر واتساب" class="fixed bottom-6 right-6 z-[9999] flex h-14 w-14 translate-y-20 opacity-0 items-center justify-center rounded-full bg-[#00c73c] shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 hover:shadow-[0_8px_30px_rgba(0,199,60,0.4)] pointer-events-none"><svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.2A8 8 0 1 1 20 11.5Z"/><path d="M8.8 8.2c.2-.5.4-.5.7-.5h.4c.2 0 .4.1.5.4l.7 1.7c.1.3 0 .5-.1.7l-.4.5c.5.9 1.2 1.6 2.1 2.1l.5-.4c.2-.1.4-.2.7-.1l1.7.7c.3.1.4.3.4.5v.4c0 .3 0 .5-.5.7-.5.2-1.4.4-2.4-.1-1-.5-2.3-1.6-3.1-3-.8-1.4-1-2.4-.7-3.1Z"/></svg></a>
+    <!-- Curved white separator: low in the middle and raised at both sides. -->
+    <svg class="pointer-events-none absolute inset-x-0 bottom-0 h-12 sm:h-20 lg:h-[112px] w-full z-10" viewBox="0 0 1440 112" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 0 Q720 102 1440 0 V112 H0Z" fill="white"></path>
+    </svg>
+
+    <!-- Mobile Menu Drawer Backdrop Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 z-40 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out"></div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="fixed inset-y-0 right-0 z-50 w-80 max-w-[85vw] bg-[#182373] text-white p-6 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between overflow-y-auto" dir="rtl">
+      <div>
+        <!-- Header -->
+        <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
+          <img src="photo/Mask Group 12 (1).png" alt="وصل أهدافك للتدريب" class="h-12 w-auto object-contain bg-white rounded-lg p-1">
+          <button id="close-menu" aria-label="إغلاق القائمة" class="text-white hover:text-brand transition">
+            <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Links -->
+        <nav class="flex flex-col gap-4 text-base font-semibold" aria-label="تنقل الجوال">
+          <a href="#" class="text-brand border-r-2 border-brand pr-3 py-1">الرئيسية</a>
+          <a href="aboutus.html" class="text-white hover:text-brand pr-3 py-1 transition">من نحن</a>
+          <a href="#" class="text-white hover:text-brand pr-3 py-1 transition">الدورات</a>
+          <a href="#" class="text-white hover:text-brand pr-3 py-1 transition">المدربين</a>
+          <a href="#" class="text-white hover:text-brand pr-3 py-1 transition">المدونة</a>
+          <a href="#" class="text-white hover:text-brand pr-3 py-1 transition">التوظيف</a>
+          <a href="#" class="text-white hover:text-brand pr-3 py-1 transition">تواصل معنا</a>
+        </nav>
+      </div>
+
+      <!-- Footer Actions -->
+      <div class="border-t border-white/10 pt-6 mt-6 flex flex-col gap-5">
+        <!-- Search -->
+        <div class="relative">
+          <input type="text" placeholder="بحث..." class="w-full bg-white/10 border border-white/20 rounded-full py-2 px-4 pr-10 text-sm focus:outline-none focus:border-brand text-white placeholder-white/50">
+          <button class="absolute left-3 top-1/2 -translate-y-1/2 text-white/70 hover:text-brand transition">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="m21 21-4.3-4.3"/>
+            </svg>
+          </button>
+        </div>
+
+<!-- Auth -->
+<div class="flex flex-col gap-3">
+  <a href="login.html" class="flex items-center justify-center gap-2 rounded-full border border-white/30 py-2.5 text-sm font-semibold hover:bg-white hover:text-ink transition">
+    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+    </svg>
+    <span>تسجيل الدخول</span>
+  </a>
+  <a href="register.html" class="flex items-center justify-center gap-2 rounded-full bg-brand py-2.5 text-sm font-semibold hover:bg-brand/90 transition text-white">
+    <span>تسجيل جديد</span>
+  </a>
+</div>
+
+        <!-- Contact Info & Socials (Mobile) -->
+        <div class="border-t border-white/10 pt-5 mt-2 flex flex-col gap-3.5 text-xs text-white/80">
+          <a href="#" class="cursor-pointer flex items-center justify-center bg-brand hover:bg-brand/90 text-white px-4 py-2.5 rounded-full text-[13px] font-semibold transition-all duration-300 shadow-md hover:-translate-y-0.5 mb-2">
+            هل لديك اي سؤال ؟
+          </a>
+          <a href="tel:920004785" class="flex items-center gap-2.5 transition hover:text-brand">
+            <i class="fa-solid fa-phone text-[13px] text-brand"></i>
+            <span>920004785</span>
+          </a>
+          <a href="https://maps.google.com/?q=المملكة+العربية+السعودية" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 transition hover:text-brand">
+            <i class="fa-solid fa-location-dot text-[13px] text-brand"></i>
+            <span>المملكة العربية السعودية</span>
+          </a>
+          <a href="mailto:info@thimpress.com" class="flex items-center gap-2.5 transition hover:text-brand">
+            <i class="fa-solid fa-envelope text-[13px] text-brand"></i>
+            <span>info@thimpress.com</span>
+          </a>
+          <!-- Socials -->
+          <div class="flex items-center gap-4 mt-2 pt-2 border-t border-white/5" dir="ltr">
+            <a href="#" aria-label="Instagram" class="transition hover:text-brand"><i class="fa-brands fa-instagram text-base"></i></a>
+            <a href="#" aria-label="Twitter" class="transition hover:text-brand"><i class="fa-brands fa-twitter text-base"></i></a>
+            <a href="#" aria-label="Snapchat" class="transition hover:text-brand"><i class="fa-brands fa-snapchat text-base"></i></a>
+            <a href="#" aria-label="WhatsApp" class="transition hover:text-brand"><i class="fa-brands fa-whatsapp text-base"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- END of Hero Section -->
+<!-- --------------------------------START of Why Us------------------------------------------ -->
+<section class="bg-white px-4 py-16 text-center sm:py-20 lg:py-24" dir="rtl" aria-labelledby="why-us-title">
+  <div class="mx-auto max-w-6xl">
+    <h2 id="why-us-title" class="text-2xl font-bold text-brand sm:text-3xl">لماذا نحن</h2>
+    <p class="mt-7 text-sm text-gray-400 sm:text-base">لأننا نهدف دوماً الى أن نكون شركاءكم في كل نجاح</p>
+
+    <div class="relative mt-14 lg:mt-20">
+      <!-- الخط المنقط الواصل بين المزايا -->
+      <img
+        src="photo/0.png"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        class="pointer-events-none absolute left-1/2 top-2 hidden w-[78%] -translate-x-1/2 lg:block"
+      >
+
+      <ol class="relative grid gap-12 lg:grid-cols-3 lg:gap-12">
+        <!-- الخطوة 1 -->
+        <li class="group relative flex flex-col items-center lg:translate-y-0">
+          <span
+            aria-hidden="true"
+            class="absolute top-0 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-slate-50 text-xs text-secondary shadow-sm transition-colors duration-300 group-hover:bg-brand group-hover:text-white"
+          >1</span>
+
+          <div class="relative mt-9 flex h-20 w-20 items-center justify-center bg-[url('photo/1.png')] bg-contain bg-center bg-no-repeat sm:h-24 sm:w-24">
+            <img src="photo/4.png" alt="حجز الدورات" loading="lazy" class="h-10 w-10 object-contain sm:h-12 sm:w-12">
+          </div>
+
+          <h3 class="mt-6 text-sm font-bold text-[#222] transition-colors duration-300 group-hover:text-brand sm:text-base">احجز دورتك بكل يسر وسهولة</h3>
+          <p class="mt-2 max-w-[85%] text-xs leading-6 text-gray-400 sm:max-w-[240px] sm:text-sm">
+            توفر لك منصتنا امكانية الحجز بكل يسر وسهولة
+          </p>
+        </li>
+
+        <!-- الخطوة 2 -->
+        <li class="group relative flex flex-col items-center lg:-translate-y-6">
+          <span
+            aria-hidden="true"
+            class="absolute top-0 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-slate-50 text-xs text-secondary shadow-sm transition-colors duration-300 group-hover:bg-brand group-hover:text-white"
+          >2</span>
+
+          <div class="relative mt-9 flex h-20 w-20 items-center justify-center bg-[url('photo/1.png')] bg-contain bg-center bg-no-repeat sm:h-24 sm:w-24">
+            <img src="photo/3.png" alt="الشهادات المعتمدة" loading="lazy" class="h-12 w-12 object-contain sm:h-14 sm:w-14">
+          </div>
+
+          <h3 class="mt-6 text-sm font-bold text-[#222] transition-colors duration-300 group-hover:text-brand sm:mt-12 sm:text-base">كل الشهادات معتمدة وموثوقة</h3>
+          <p class="mt-2 max-w-[85%] text-xs leading-6 text-gray-400 sm:max-w-[240px] sm:text-sm">
+            اطمأن فجميع الدورات تم التاكد من اعتمادها ومن جهة اعتمادها
+          </p>
+        </li>
+
+        <!-- الخطوة 3 -->
+        <li class="group relative flex flex-col items-center lg:translate-y-1">
+          <span
+            aria-hidden="true"
+            class="absolute top-0 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-slate-50 text-xs text-secondary shadow-sm transition-colors duration-300 group-hover:bg-brand group-hover:text-white"
+          >3</span>
+
+          <div class="relative mt-9 flex h-20 w-20 items-center justify-center bg-[url('photo/1.png')] bg-contain bg-center bg-no-repeat sm:h-24 sm:w-24">
+            <img src="photo/2.png" alt="مدربون ومحاضرون" loading="lazy" class="h-12 w-12 object-contain sm:h-14 sm:w-14">
+          </div>
+
+          <h3 class="mt-6 text-sm font-bold text-[#222] transition-colors duration-300 group-hover:text-brand sm:text-base">أفضل مدربين ومحاضرين على مستوى المملكة</h3>
+          <p class="mt-2 max-w-[85%] text-xs leading-6 text-gray-400 sm:max-w-[255px] sm:text-sm">
+            نوفر لك نخبة من أفضل محاضرين على مستوى المملكة العربية السعودية
+          </p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+<!-- --------------------------------------END of Why Us-------------------------------------------- -->
+<!-- --------------------------------START of Courses ------------------------------------------ -->
+<section class="relative overflow-hidden px-4 py-24 text-center sm:py-28 lg:py-32" dir="rtl" aria-labelledby="courses-title">
+  <!-- الخلفية المنحنية: نفس القوس في الأعلى والأسفل، وتتمدد بسلاسة مع ارتفاع القسم. -->
+  <svg class="pointer-events-none absolute inset-0 h-full w-full" viewBox="0 0 1440 1000" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 100 Q720 -45 1440 100 V900 Q720 1045 0 900 Z" fill="#f5f8fb" />
+  </svg>
+  <div class="relative mx-auto max-w-[1160px]">
+    <h2 id="courses-title" class="text-2xl font-bold text-brand sm:text-3xl">الدورات</h2>
+    <p class="mt-4 text-sm text-gray-400 sm:text-base">دورات مميزة لكل الطلبة مجانية و مدفوعة بأسعار مميزة في كل التخصصات</p>
+
+    <div class="mt-12 flex items-center justify-center gap-7 text-sm text-gray-500 sm:gap-12">
+      <button type="button" class="font-semibold text-brand">دورات أون لاين</button>
+      <button type="button" class="transition hover:text-brand">دورات مسجلة</button>
+      <button type="button" class="transition hover:text-brand">دورات حضورية</button>
+    </div>
+
+    <!-- JavaScript يرسم بطاقات الدورات هنا من مصفوفة courses -->
+    <div id="courses-grid" class="mx-auto mt-8 grid max-w-[1110px] justify-items-center gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" aria-live="polite"></div>
+
+    <button type="button" class="mt-9 rounded-full border border-brand px-8 py-2 text-xs font-semibold text-brand transition hover:bg-brand hover:text-white">كل الدورات</button>
+  </div>
+</section>
+<!-- --------------------------------END of Courses ------------------------------------------ -->
+<!-- --------------------------------START of Trainers ------------------------------------------ -->
+<section class="bg-white px-4 py-12 text-center sm:py-16 lg:py-24" dir="rtl" aria-labelledby="trainers-title">
+  <div class="mx-auto max-w-6xl">
+    <h2 id="trainers-title" class="text-xl font-bold text-brand sm:text-2xl lg:text-3xl">المدربين</h2>
+    <p class="mx-auto mt-4 max-w-md text-sm text-gray-400 sm:mt-7 sm:max-w-none sm:text-base">
+      توفر لك منصتنا افضل محاضرين على مستوى المملكة العربية السعودية
+    </p>
+
+    <!-- Trainers Grid -->
+    <div class="owl-carousel owl-theme trainers-carousel mt-10" dir="ltr">
+
+      <!-- Trainer Card 1 -->
+      <div class="pt-4 pb-4 px-1">
+        <div class="group flex h-full min-h-[210px] w-full flex-col items-center justify-center rounded-2xl border-2 border-gray-100 bg-gray-50 px-3 py-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-brand hover:bg-white sm:min-h-[248px] sm:px-4">
+          <img src="photo/trainers1.png" alt="أ/احمد ابراهيم" class="h-20 w-20 rounded-full object-cover ring-4 ring-white shadow sm:h-[120px] sm:w-[120px]">
+          <h3 class="mt-3 mb-1 text-sm font-bold text-gray-800 transition-colors duration-300 group-hover:text-brand sm:mt-4 sm:text-base">أ/احمد ابراهيم</h3>
+          <p class="text-xs text-gray-400">استاذ اختبارات الجودة</p>
+        </div>
+      </div>
+
+      <!-- Trainer Card 2 -->
+      <div class="pt-4 pb-4 px-1">
+        <div class="group flex h-full min-h-[210px] w-full flex-col items-center justify-center rounded-2xl border-2 border-gray-100 bg-gray-50 px-3 py-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-brand hover:bg-white sm:min-h-[248px] sm:px-4">
+          <img src="photo/trainers2.png" alt="أ/احمد ابراهيم" class="h-20 w-20 rounded-full object-cover ring-4 ring-white shadow sm:h-[120px] sm:w-[120px]">
+          <h3 class="mt-3 mb-1 text-sm font-bold text-gray-800 transition-colors duration-300 group-hover:text-brand sm:mt-4 sm:text-base">أ/احمد ابراهيم</h3>
+          <p class="text-xs text-gray-400">استاذ اختبارات الجودة</p>
+        </div>
+      </div>
+
+      <!-- Trainer Card 3 -->
+      <div class="pt-4 pb-4 px-1">
+        <div class="group flex h-full min-h-[210px] w-full flex-col items-center justify-center rounded-2xl border-2 border-gray-100 bg-gray-50 px-3 py-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-brand hover:bg-white sm:min-h-[248px] sm:px-4">
+          <img src="photo/trainers3.png" alt="أ/احمد ابراهيم" class="h-20 w-20 rounded-full object-cover ring-4 ring-white shadow sm:h-[120px] sm:w-[120px]">
+          <h3 class="mt-3 mb-1 text-sm font-bold text-gray-800 transition-colors duration-300 group-hover:text-brand sm:mt-4 sm:text-base">أ/احمد ابراهيم</h3>
+          <p class="text-xs text-gray-400">استاذ اختبارات الجودة</p>
+        </div>
+      </div>
+
+      <!-- Trainer Card 4 -->
+      <div class="pt-4 pb-4 px-1">
+        <div class="group flex h-full min-h-[210px] w-full flex-col items-center justify-center rounded-2xl border-2 border-gray-100 bg-gray-50 px-3 py-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-brand hover:bg-white sm:min-h-[248px] sm:px-4">
+          <img src="photo/trainers4.png" alt="أ/احمد ابراهيم" class="h-20 w-20 rounded-full object-cover ring-4 ring-white shadow sm:h-[120px] sm:w-[120px]">
+          <h3 class="mt-3 mb-1 text-sm font-bold text-gray-800 transition-colors duration-300 group-hover:text-brand sm:mt-4 sm:text-base">أ/احمد ابراهيم</h3>
+          <p class="text-xs text-gray-400">استاذ اختبارات الجودة</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Slider Dots -->
+    <div id="trainers-custom-dots" class="mt-6 flex items-center justify-center gap-3 sm:mt-8 sm:gap-3.5" aria-label="مؤشرات السلايدر">
+      <button type="button" data-index="0" class="h-2.5 w-2.5 rounded-full bg-brand -translate-y-[6px] border border-brand sm:h-3 sm:w-3 sm:-translate-y-[7px] transition-all duration-300 focus:outline-none"></button>
+      <button type="button" data-index="1" class="h-2.5 w-2.5 rounded-full bg-gray-200 sm:h-3 sm:w-3 transition-all duration-300 focus:outline-none"></button>
+      <button type="button" data-index="2" class="h-2.5 w-2.5 rounded-full bg-gray-200 sm:h-3 sm:w-3 transition-all duration-300 focus:outline-none"></button>
+    </div>
+
+    <!-- CTA Button -->
+    <button type="button" class="mt-7 rounded-full border border-gray-300 px-6 py-2 text-sm text-gray-700 transition hover:bg-brand hover:text-white hover:border-brand sm:mt-9 sm:px-8 sm:py-2.5">
+      كل المدربين
+    </button>
+
+  </div>
+</section>
+<!-- --------------------------------------END of Trainers-------------------------------------------- -->
+<!-- --------------------------------START of Blog ------------------------------------------ -->
+<section class="relative overflow-hidden px-4 py-24 text-center sm:py-28 lg:py-32" dir="rtl" aria-labelledby="blog-title">
+  <svg class="pointer-events-none absolute inset-0 h-full w-full" viewBox="0 0 1440 1000" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 100 Q720 -100 1440 100 V900 Q720 1100 0 900 Z" fill="#f5f8fb" />
+  </svg>
+  <div class="relative mx-auto max-w-6xl">
+    <h2 id="blog-title" class="text-xl font-bold text-brand sm:text-2xl lg:text-3xl">المدونة</h2>
+    <p class="mx-auto mt-4 max-w-md text-sm text-gray-400 sm:mt-7 sm:max-w-none sm:text-base">
+      دورات مميزة لكل الطلبة مجانية و مدفوعة بأسعار مميزة في كل التخصصات
+    </p>
+
+    <!-- Blog Grid -->
+    <div class="owl-carousel owl-theme blog-carousel mt-10" dir="ltr">
+
+      <!-- Blog Card 1 -->
+      <div class="pt-4 pb-4 px-1">
+        <article dir="rtl" class="mx-auto flex w-full max-w-[270px] flex-col rounded-[28px] border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg overflow-hidden">
+          <div class="p-4 pb-0">
+            <img src="photo/blog.png" alt="شرح طريقة التسجيل بالموقع" class="h-[147px] w-full rounded-2xl object-cover">
+          </div>
+
+          <div dir="ltr" class="mt-4 flex items-center justify-center gap-6 bg-[#f4f7fe] py-3.5 text-xs font-bold text-[#1b1464]">
+            <span class="flex items-center gap-1.5">
+              <span class="relative">
+                <i class="fa-regular fa-calendar text-[14px]"></i>
+                <i class="fa-solid fa-clock absolute -bottom-[2px] -right-[2px] text-[8px] bg-[#f4f7fe] rounded-full p-[0.5px]"></i>
+              </span>
+              <span>15/7/2019</span>
+            </span>
+            <span class="flex items-center gap-1.5"><i class="fa-regular fa-comment text-[14px]"></i>17</span>
+            <span class="flex items-center gap-1.5">
+              <span class="relative inline-flex items-center justify-center w-3.5 h-3.5">
+                <i class="fa-solid fa-expand text-[14px]"></i>
+                <i class="fa-regular fa-eye absolute text-[8px] bg-[#f4f7fe] px-[0.5px]"></i>
+              </span>
+              <span>30</span>
+            </span>
+          </div>
+
+          <div class="flex flex-1 flex-col justify-between p-4 pt-5">
+            <h3 class="text-center text-[15px] font-bold leading-relaxed text-[#182B54]">
+              شرح طريقة التسجيل بالموقع وشراء دورة والذهاب للدورة الأون لاين
+            </h3>
+
+            <button type="button" class="mt-6 w-full rounded-full bg-[#1B1464] py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#17BF92]">
+              التفاصيل
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Blog Card 2 -->
+      <div class="pt-4 pb-4 px-1">
+        <article dir="rtl" class="mx-auto flex w-full max-w-[270px] flex-col rounded-[28px] border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg overflow-hidden">
+          <div class="p-4 pb-0">
+            <img src="photo/blog.png" alt="شرح طريقة التسجيل بالموقع" class="h-[147px] w-full rounded-2xl object-cover">
+          </div>
+
+          <div dir="ltr" class="mt-4 flex items-center justify-center gap-6 bg-[#f4f7fe] py-3.5 text-xs font-bold text-[#1b1464]">
+            <span class="flex items-center gap-1.5">
+              <span class="relative">
+                <i class="fa-regular fa-calendar text-[14px]"></i>
+                <i class="fa-solid fa-clock absolute -bottom-[2px] -right-[2px] text-[8px] bg-[#f4f7fe] rounded-full p-[0.5px]"></i>
+              </span>
+              <span>15/7/2019</span>
+            </span>
+            <span class="flex items-center gap-1.5"><i class="fa-regular fa-comment text-[14px]"></i>17</span>
+            <span class="flex items-center gap-1.5">
+              <span class="relative inline-flex items-center justify-center w-3.5 h-3.5">
+                <i class="fa-solid fa-expand text-[14px]"></i>
+                <i class="fa-regular fa-eye absolute text-[8px] bg-[#f4f7fe] px-[0.5px]"></i>
+              </span>
+              <span>30</span>
+            </span>
+          </div>
+
+          <div class="flex flex-1 flex-col justify-between p-4 pt-5">
+            <h3 class="text-center text-[15px] font-bold leading-relaxed text-[#182B54]">
+              شرح طريقة التسجيل بالموقع وشراء دورة والذهاب للدورة الأون لاين
+            </h3>
+
+            <button type="button" class="mt-6 w-full rounded-full bg-[#1B1464] py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#17BF92]">
+              التفاصيل
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Blog Card 3 -->
+      <div class="pt-4 pb-4 px-1">
+        <article dir="rtl" class="mx-auto flex w-full max-w-[270px] flex-col rounded-[28px] border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg overflow-hidden">
+          <div class="p-4 pb-0">
+            <img src="photo/blog.png" alt="شرح طريقة التسجيل بالموقع" class="h-[147px] w-full rounded-2xl object-cover">
+          </div>
+
+          <div dir="ltr" class="mt-4 flex items-center justify-center gap-6 bg-[#f4f7fe] py-3.5 text-xs font-bold text-[#1b1464]">
+            <span class="flex items-center gap-1.5">
+              <span class="relative">
+                <i class="fa-regular fa-calendar text-[14px]"></i>
+                <i class="fa-solid fa-clock absolute -bottom-[2px] -right-[2px] text-[8px] bg-[#f4f7fe] rounded-full p-[0.5px]"></i>
+              </span>
+              <span>15/7/2019</span>
+            </span>
+            <span class="flex items-center gap-1.5"><i class="fa-regular fa-comment text-[14px]"></i>17</span>
+            <span class="flex items-center gap-1.5">
+              <span class="relative inline-flex items-center justify-center w-3.5 h-3.5">
+                <i class="fa-solid fa-expand text-[14px]"></i>
+                <i class="fa-regular fa-eye absolute text-[8px] bg-[#f4f7fe] px-[0.5px]"></i>
+              </span>
+              <span>30</span>
+            </span>
+          </div>
+
+          <div class="flex flex-1 flex-col justify-between p-4 pt-5">
+            <h3 class="text-center text-[15px] font-bold leading-relaxed text-[#182B54]">
+              شرح طريقة التسجيل بالموقع وشراء دورة والذهاب للدورة الأون لاين
+            </h3>
+
+            <button type="button" class="mt-6 w-full rounded-full bg-[#1B1464] py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#17BF92]">
+              التفاصيل
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Blog Card 4 -->
+      <div class="pt-4 pb-4 px-1">
+        <article dir="rtl" class="mx-auto flex w-full max-w-[270px] flex-col rounded-[28px] border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg overflow-hidden">
+          <div class="p-4 pb-0">
+            <img src="photo/blog.png" alt="شرح طريقة التسجيل بالموقع" class="h-[147px] w-full rounded-2xl object-cover">
+          </div>
+
+          <div dir="ltr" class="mt-4 flex items-center justify-center gap-6 bg-[#f4f7fe] py-3.5 text-xs font-bold text-[#1b1464]">
+            <span class="flex items-center gap-1.5">
+              <span class="relative">
+                <i class="fa-regular fa-calendar text-[14px]"></i>
+                <i class="fa-solid fa-clock absolute -bottom-[2px] -right-[2px] text-[8px] bg-[#f4f7fe] rounded-full p-[0.5px]"></i>
+              </span>
+              <span>15/7/2019</span>
+            </span>
+            <span class="flex items-center gap-1.5"><i class="fa-regular fa-comment text-[14px]"></i>17</span>
+            <span class="flex items-center gap-1.5">
+              <span class="relative inline-flex items-center justify-center w-3.5 h-3.5">
+                <i class="fa-solid fa-expand text-[14px]"></i>
+                <i class="fa-regular fa-eye absolute text-[8px] bg-[#f4f7fe] px-[0.5px]"></i>
+              </span>
+              <span>30</span>
+            </span>
+          </div>
+
+          <div class="flex flex-1 flex-col justify-between p-4 pt-5">
+            <h3 class="text-center text-[15px] font-bold leading-relaxed text-[#182B54]">
+              شرح طريقة التسجيل بالموقع وشراء دورة والذهاب للدورة الأون لاين
+            </h3>
+            <button type="button" class="mt-6 w-full rounded-full bg-[#1B1464] py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#17BF92]">
+              التفاصيل
+            </button>
+          </div>
+        </article>
+      </div>
+
+    </div>
+
+    <!-- Slider Dots -->
+    <div id="blog-custom-dots" class="mt-6 flex items-center justify-center gap-3 sm:mt-8 sm:gap-3.5" aria-label="مؤشرات السلايدر">
+      <button type="button" data-index="0" class="h-2.5 w-2.5 rounded-full bg-brand -translate-y-[6px] border border-brand sm:h-3 sm:w-3 sm:-translate-y-[7px] transition-all duration-300 focus:outline-none"></button>
+      <button type="button" data-index="1" class="h-2.5 w-2.5 rounded-full bg-white sm:h-3 sm:w-3 transition-all duration-300 focus:outline-none"></button>
+      <button type="button" data-index="2" class="h-2.5 w-2.5 rounded-full bg-white sm:h-3 sm:w-3 transition-all duration-300 focus:outline-none"></button>
+    </div>
+
+  </div>
+</section>
+<!-- --------------------------------------END of Blog-------------------------------------------- -->
+<!-- --------------------------------START of CertificateBenefits ------------------------------------------ -->
+<section class="relative overflow-hidden px-4 py-24 text-center sm:py-28 lg:py-32 bg-white" dir="rtl" aria-labelledby="cert-benefits-title">
+
+  <div class="relative mx-auto max-w-6xl">
+
+    <h2 id="cert-benefits-title" class="text-2xl font-bold text-brand sm:text-2xl lg:text-3xl">أهمية الحصول على شهادة معتمدة</h2>
+    <p class="mx-auto mt-4 max-w-md text-md text-gray-400 sm:mt-7 sm:max-w-none sm:text-base">
+      دورات مميزة لكل الطلبة مجانية و مدفوعة بأسعار مميزة في كل التخصصات
+    </p>
+
+    <!-- ------------------- Timeline (Desktop) ------------------- -->
+    <div class="relative mx-auto mt-16 hidden text-right lg:block" style="height: 700px; max-width: 1000px;">
+
+      <!-- الخط المتعرج باستخدام SVG للتحكم والوضوح الفائقين -->
+      <svg class="pointer-events-none absolute inset-0 h-full w-full" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M 500,14 L 500,110 L 573,110 L 573,280 L 429,280 L 429,420 L 573,420 L 573,560 L 500,560 L 500,686" stroke="#e2e8f0" stroke-width="2" stroke-linejoin="miter" fill="none" />
+      </svg>
+
+      <!-- الماسة العلوية -->
+      <div class="absolute -translate-x-1/2 -translate-y-1/2" style="left:50%; top:2%;">
+        <div class="h-7 w-7 rotate-45 rounded-md bg-brand shadow-md"></div>
+      </div>
+
+      <!-- الماسة السفلية -->
+      <div class="absolute -translate-x-1/2 -translate-y-1/2" style="left:50%; top:98%;">
+        <div class="h-7 w-7 rotate-45 rounded-md bg-brand shadow-md"></div>
+      </div>
+
+      <!-- نقطة 1 -->
+      <div class="group">
+        <div class="absolute -translate-x-1/2 -translate-y-1/2 w-9 h-9 rotate-45 border border-ink bg-white p-[2px] rounded-sm shadow-sm transition-colors duration-300 group-hover:border-brand"
+            style="left:57.3%; top:30%;">
+          <div class="w-full h-full bg-ink rounded-sm flex items-center justify-center transition-colors duration-300 group-hover:bg-brand">
+            <span class="-rotate-45 text-white font-bold text-xs">1</span>
+          </div>
+        </div>
+
+        <!-- محتوى 1 (يمين) -->
+        <div class="absolute w-[34%] text-right" style="right:5%; top:22%;">
+          <h3 class="mb-2 text-lg font-bold text-gray-800 transition-colors duration-300 group-hover:text-brand">تحسين سيرتك الذاتية</h3>
+          <p class="text-sm leading-relaxed text-gray-500 font-medium">
+            إن الحصول على شهادة معتمدة يؤكد لأصحاب العمل أنك على دراية تامة بالمفاهيم الأساسية للدورة التي حضرتها.
+            ويمكنك إضافة الشهادة إلى سيرتك الذاتية وتحميلها بسهولة إلى حسابك الخاص على LinkedIn أو غيره من مواقع التوظيف.
+          </p>
+        </div>
+      </div>
+
+      <!-- نقطة 2 -->
+      <div class="group">
+        <div class="absolute -translate-x-1/2 -translate-y-1/2 w-9 h-9 rotate-45 border border-ink bg-white p-[2px] rounded-sm shadow-sm transition-colors duration-300 group-hover:border-brand"
+            style="left:42.9%; top:50%;">
+          <div class="w-full h-full bg-ink rounded-sm flex items-center justify-center transition-colors duration-300 group-hover:bg-brand">
+            <span class="-rotate-45 text-white font-bold text-xs">2</span>
+          </div>
+        </div>
+
+        <!-- محتوى 2 (يسار) -->
+        <div class="absolute w-[35%] text-right" style="right:61%; top:42%;">
+          <h3 class="mb-2 text-lg font-bold text-gray-800 transition-colors duration-300 group-hover:text-brand">إيجاد وظيفة</h3>
+          <p class="text-sm leading-relaxed text-gray-500 font-medium">
+            يبيّن الحصول على شهادة معتمدة أنك تتمتع بمهارات حقيقية وتتطلّع إلى التعلم المستمر، وهذا من أهم الصفات المطلوبة
+            في سوق العمل اليوم. ومن خلال إبراز هذه الصفات، يمكنك تعزيز فرصك في العثور على الوظيفة التي تريدها.
+          </p>
+        </div>
+      </div>
+
+      <!-- نقطة 3 -->
+      <div class="group">
+        <div class="absolute -translate-x-1/2 -translate-y-1/2 w-9 h-9 rotate-45 border border-ink bg-white p-[2px] rounded-sm shadow-sm transition-colors duration-300 group-hover:border-brand"
+            style="left:57.3%; top:70%;">
+          <div class="w-full h-full bg-ink rounded-sm flex items-center justify-center transition-colors duration-300 group-hover:bg-brand">
+            <span class="-rotate-45 text-white font-bold text-xs">3</span>
+          </div>
+        </div>
+
+        <!-- محتوى 3 (يمين) -->
+        <div class="absolute w-[34%] text-right" style="right:5%; top:62%;">
+          <h3 class="mb-2 text-lg font-bold text-gray-800 transition-colors duration-300 group-hover:text-brand">تطوير المسار الوظيفي</h3>
+          <p class="text-sm leading-relaxed text-gray-500 font-medium">
+            من خلال إثراء معرفتك الرقمية يمكنك تعزيز فرصك في العثور على وظيفة أو الحصول على ترقية أو الإنتقال إلى وظيفة
+            جديدة كلياً.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="relative mt-14 mx-auto max-w-2xl text-right lg:hidden">
+      <!-- خط متصل رأسي -->
+      <div class="absolute right-[23px] top-4 bottom-4 w-[2px] bg-gray-200"></div>
+
+      <!-- Point 1 -->
+      <div class="group relative mb-12 last:mb-0">
+        <!-- Badge -->
+        <div class="absolute right-[8px] top-1 z-10 w-8 h-8 rotate-45 border border-ink bg-white p-[2px] rounded-sm shadow-sm transition-colors duration-300 group-hover:border-brand">
+          <div class="w-full h-full bg-ink rounded-sm flex items-center justify-center transition-colors duration-300 group-hover:bg-brand">
+            <span class="-rotate-45 text-white font-bold text-[10px]">1</span>
+          </div>
+        </div>
+        <!-- Content -->
+        <div class="pr-14">
+          <h3 class="mb-2 text-base font-bold text-gray-800 transition-colors duration-300 group-hover:text-brand">تحسين سيرتك الذاتية</h3>
+          <p class="text-sm leading-relaxed text-gray-500 font-medium">
+            إن الحصول على شهادة معتمدة يؤكد لأصحاب العمل أنك على دراية تامة بالمفاهيم الأساسية للدورة التي حضرتها.
+            ويمكنك إضافة الشهادة إلى سيرتك الذاتية وتحميلها بسهولة إلى حسابك الخاص على LinkedIn أو غيره من مواقع التوظيف.
+          </p>
+        </div>
+      </div>
+
+      <!-- Point 2 -->
+      <div class="group relative mb-12 last:mb-0">
+        <!-- Badge -->
+        <div class="absolute right-[8px] top-1 z-10 w-8 h-8 rotate-45 border border-ink bg-white p-[2px] rounded-sm shadow-sm transition-colors duration-300 group-hover:border-brand">
+          <div class="w-full h-full bg-ink rounded-sm flex items-center justify-center transition-colors duration-300 group-hover:bg-brand">
+            <span class="-rotate-45 text-white font-bold text-[10px]">2</span>
+          </div>
+        </div>
+        <!-- Content -->
+        <div class="pr-14">
+          <h3 class="mb-2 text-base font-bold text-gray-800 transition-colors duration-300 group-hover:text-brand">إيجاد وظيفة</h3>
+          <p class="text-sm leading-relaxed text-gray-500 font-medium">
+            يبيّن الحصول على شهادة معتمدة أنك تتمتع بمهارات حقيقية وتتطلّع إلى التعلم المستمر، وهذا من أهم الصفات المطلوبة
+            في سوق العمل اليوم. ومن خلال إبراز هذه الصفات، يمكنك تعزيز فرصك في العثور على الوظيفة التي تريدها.
+          </p>
+        </div>
+      </div> 
+
+      <!-- Point 3 -->
+      <div class="group relative mb-12 last:mb-0">
+        <!-- Badge -->
+        <div class="absolute right-[8px] top-1 z-10 w-8 h-8 rotate-45 border border-ink bg-white p-[2px] rounded-sm shadow-sm transition-colors duration-300 group-hover:border-brand">
+          <div class="w-full h-full bg-ink rounded-sm flex items-center justify-center transition-colors duration-300 group-hover:bg-brand">
+            <span class="-rotate-45 text-white font-bold text-[10px]">3</span>
+          </div>
+        </div>
+        <!-- Content -->
+        <div class="pr-14">
+          <h3 class="mb-2 text-base font-bold text-gray-800 transition-colors duration-300 group-hover:text-brand">تطوير المسار الوظيفي</h3>
+          <p class="text-sm leading-relaxed text-gray-500 font-medium">
+            من خلال إثراء معرفتك الرقمية يمكنك تعزيز فرصك في العثور على وظيفة أو الحصول على ترقية أو الإنتقال إلى وظيفة
+            جديدة كلياً.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- --------------------------------END of CertificateBenefits ------------------------------------------ -->
+<!-- --------------------------------START of Partners Section ------------------------------------------ -->
+<section class="relative overflow-hidden px-4 py-24 text-center sm:py-28 lg:py-32 bg-white" dir="rtl" aria-labelledby="cert-benefits-title">
+
+  <div class="relative mx-auto max-w-6xl">
+
+    <h2 id="cert-benefits-title" class="text-2xl font-bold text-brand sm:text-2xl lg:text-3xl">شركائنا</h2>
+    <p class="mx-auto mt-4 max-w-md text-md text-gray-400 sm:mt-7 sm:max-w-none sm:text-base">
+      هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.
+    </p>
+
+    <!-- Slider -->
+    <div class="relative mt-12 sm:mt-16">
+      <div class="owl-carousel owl-theme partners-carousel" dir="ltr">
+        <!-- Partner Card 1 -->
+        <div class="partner-card flex h-[150px] sm:h-[170px] w-full items-center justify-center rounded-2xl border border-gray-100 bg-white p-3 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105">
+          <img src="photo/img@2x.png" alt="informa" loading="lazy">
+        </div>
+        <!-- Partner Card 2 -->
+        <div class="partner-card flex h-[150px] sm:h-[170px] w-full items-center justify-center rounded-2xl border border-gray-100 bg-white p-3 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105">
+          <img src="photo/img@2x (1).png" alt="atd" loading="lazy">
+        </div>
+        <!-- Partner Card 3 -->
+        <div class="partner-card flex h-[150px] sm:h-[170px] w-full items-center justify-center rounded-2xl border border-gray-100 bg-white p-3 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105">
+          <img src="photo/img@2x (2).png" alt="Compensation" loading="lazy">
+        </div>
+        <!-- Partner Card 4 -->
+        <div class="partner-card flex h-[150px] sm:h-[170px] w-full items-center justify-center rounded-2xl border border-gray-100 bg-white p-3 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105">
+          <img src="photo/img@2x (3).png" alt="HRSE" loading="lazy">
+        </div>
+        <!-- Partner Card 5 -->
+        <div class="partner-card flex h-[150px] sm:h-[170px] w-full items-center justify-center rounded-2xl border border-gray-100 bg-white p-3 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105">
+          <img src="photo/img@2x (4).png" alt="EdEx" loading="lazy">
+        </div>
+        <!-- Partner Card 6 -->
+        <div class="partner-card flex h-[150px] sm:h-[170px] w-full items-center justify-center rounded-2xl border border-gray-100 bg-white p-3 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105">
+          <img src="photo/img@2x (5).png" alt="Agra" loading="lazy">
+        </div>
+      </div>
+      <!-- Custom Dots -->
+      <div id="partners-custom-dots" class="mt-8 flex items-center justify-center gap-3 sm:gap-3.5" aria-label="مؤشرات السلايدر">
+        <button type="button" data-index="0" class="h-2.5 w-2.5 rounded-full bg-brand -translate-y-[6px] border border-brand sm:h-3 sm:w-3 sm:-translate-y-[7px] transition-all duration-300 focus:outline-none"></button>
+        <button type="button" data-index="1" class="h-2.5 w-2.5 rounded-full bg-gray-200 sm:h-3 sm:w-3 transition-all duration-300 focus:outline-none"></button>
+        <button type="button" data-index="2" class="h-2.5 w-2.5 rounded-full bg-gray-200 sm:h-3 sm:w-3 transition-all duration-300 focus:outline-none"></button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- --------------------------------END of Partners Section ------------------------------------------ -->
+<!-- --------------------------------START of Statistics ------------------------------------------ -->
+<section class="relative isolate h-[400px] overflow-hidden bg-white sm:h-[260px]" dir="rtl" aria-label="إحصائيات المنصة">
+  <div class="absolute inset-x-0 top-0 h-[390px] overflow-hidden bg-cover bg-center sm:h-[260px] [clip-path:ellipse(72%_45%_at_50%_50%)]" style="background-image: url('photo/hero section.jpg');">
+    <img src="photo/Rectangle 673.png" alt="" aria-hidden="true" class="absolute inset-0 h-full w-full object-cover opacity-[.88]">
+  </div>
+  <div class="relative z-10 mx-auto grid h-[360px] max-w-6xl grid-cols-2 content-start gap-y-6 px-7 pt-11 text-center sm:h-[260px] sm:grid-cols-4 sm:gap-y-0 sm:px-10 sm:pt-[58px] lg:px-0">
+
+    <!-- دورة مسجلة -->
+    <article class="group order-3 flex min-w-0 flex-col items-center sm:order-none">
+      <div class="flex h-[82px] w-[82px] items-center justify-center rounded-full border border-dotted border-[rgba(255,255,255,0.65)] shadow-[0_0_0_5px_rgba(255,255,255,0.08),0_0_0_10px_rgba(255,255,255,0.06)]" aria-label="الدورات المسجلة">
+        <span class="flex h-full w-full items-center justify-center rounded-full bg-white text-[#3632a6] text-[29px] transition-colors duration-300 group-hover:bg-teal-500">
+          <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+        </span>
+      </div>
+      <strong class="mt-2.5 text-sm font-extrabold text-white">1300</strong>
+      <span class="mt-1 text-xs font-semibold text-white/90 transition-colors duration-300 group-hover:text-teal-400">دورة مسجلة</span>
+    </article>
+
+    <!-- مدرب -->
+    <article class="group order-4 flex min-w-0 flex-col items-center sm:order-none sm:border-r sm:border-white/25">
+      <div class="flex h-[82px] w-[82px] items-center justify-center rounded-full border border-dotted border-[rgba(255,255,255,0.65)] shadow-[0_0_0_5px_rgba(255,255,255,0.08),0_0_0_10px_rgba(255,255,255,0.06)]" aria-label="المدربون">
+        <span class="flex h-full w-full items-center justify-center rounded-full bg-white text-[#3632a6] text-[29px] transition-colors duration-300 group-hover:bg-teal-500">
+          <i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i>
+        </span>
+      </div>
+      <strong class="mt-2.5 text-sm font-extrabold text-white">100</strong>
+      <span class="mt-1 text-xs font-semibold text-white/90 transition-colors duration-300 group-hover:text-teal-400">مدرب</span>
+    </article>
+
+    <!-- طالب -->
+    <article class="group order-1 flex min-w-0 flex-col items-center sm:order-none sm:border-r sm:border-white/25">
+      <div class="flex h-[82px] w-[82px] items-center justify-center rounded-full border border-dotted border-[rgba(255,255,255,0.65)] shadow-[0_0_0_5px_rgba(255,255,255,0.08),0_0_0_10px_rgba(255,255,255,0.06)]" aria-label="الطلاب">
+        <span class="flex h-full w-full items-center justify-center rounded-full bg-white text-[#3632a6] text-[29px] transition-colors duration-300 group-hover:bg-teal-500">
+          <i class="fa-solid fa-users" aria-hidden="true"></i>
+        </span>
+      </div>
+      <strong class="mt-2.5 text-sm font-extrabold text-white">900</strong>
+      <span class="mt-1 text-xs font-semibold text-white/90 transition-colors duration-300 group-hover:text-teal-400">طالب</span>
+    </article>
+
+    <!-- محاضرة أون لاين -->
+    <article class="group order-2 flex min-w-0 flex-col items-center sm:order-none sm:border-r sm:border-white/25">
+      <div class="flex h-[82px] w-[82px] items-center justify-center rounded-full border border-dotted border-[rgba(255,255,255,0.65)] shadow-[0_0_0_5px_rgba(255,255,255,0.08),0_0_0_10px_rgba(255,255,255,0.06)]" aria-label="المحاضرات الأونلاين">
+        <span class="flex h-full w-full items-center justify-center rounded-full bg-white text-[#3632a6] text-[29px] transition-colors duration-300 group-hover:bg-teal-500">
+          <i class="fa-solid fa-laptop" aria-hidden="true"></i>
+        </span>
+      </div>
+      <strong class="mt-2.5 text-sm font-extrabold text-white">15246</strong>
+      <span class="mt-1 text-xs font-semibold text-white/90 transition-colors duration-300 group-hover:text-teal-400">محاضرة أون لاين</span>
+    </article>
+
+  </div>
+</section>
+<!-- --------------------------------END of Statistics ------------------------------------------ -->
+<!-- --------------------------------START of Credits ------------------------------------------ -->
+<section class="relative overflow-hidden px-4 py-24 text-center sm:py-28 lg:py-32 bg-white" dir="rtl" aria-labelledby="cert-benefits-title">
+
+  <div class="relative mx-auto max-w-6xl">
+
+    <h2 id="cert-benefits-title" class="text-2xl font-bold text-brand sm:text-2xl lg:text-3xl">الاعتمادات</h2>
+    <p class="mx-auto mt-4 max-w-md text-md text-gray-400 sm:mt-7 sm:max-w-none sm:text-base">
+      هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.
+    </p>
+
+    <!-- Slider -->
+    <div class="relative mt-12 sm:mt-16">
+      <div class="owl-carousel owl-theme credits-carousel" dir="ltr">
+        <!-- Credits Card 1 -->
+        <div class="partner-card flex h-[150px] sm:h-[170px] w-full items-center justify-center rounded-2xl border border-gray-100 bg-white p-3 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105">
+          <img src="photo/img@2x.png" alt="informa" loading="lazy">
+        </div>
+        <!-- Credits Card 2 -->
+        <div class="partner-card flex h-[150px] sm:h-[170px] w-full items-center justify-center rounded-2xl border border-gray-100 bg-white p-3 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105">
+          <img src="photo/img@2x (1).png" alt="atd" loading="lazy">
+        </div>
+        <!-- Credits Card 3 -->
+        <div class="partner-card flex h-[150px] sm:h-[170px] w-full items-center justify-center rounded-2xl border border-gray-100 bg-white p-3 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105">
+          <img src="photo/img@2x (2).png" alt="Compensation" loading="lazy">
+        </div>
+        <!-- Credits Card 4 -->
+        <div class="partner-card flex h-[150px] sm:h-[170px] w-full items-center justify-center rounded-2xl border border-gray-100 bg-white p-3 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105">
+          <img src="photo/img@2x (3).png" alt="HRSE" loading="lazy">
+        </div>
+        <!-- Credits Card 5 -->
+        <div class="partner-card flex h-[150px] sm:h-[170px] w-full items-center justify-center rounded-2xl border border-gray-100 bg-white p-3 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105">
+          <img src="photo/img@2x (4).png" alt="EdEx" loading="lazy">
+        </div>
+        <!-- Credits Card 6 -->
+        <div class="partner-card flex h-[150px] sm:h-[170px] w-full items-center justify-center rounded-2xl border border-gray-100 bg-white p-3 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105">
+          <img src="photo/img@2x (5).png" alt="Agra" loading="lazy">
+        </div>
+      </div>
+      <!-- Credits Dots -->
+      <div id="credits-custom-dots" class="mt-8 flex items-center justify-center gap-3 sm:gap-3.5" aria-label="مؤشرات السلايدر">
+        <button type="button" data-index="0" class="h-2.5 w-2.5 rounded-full bg-brand -translate-y-[6px] border border-brand sm:h-3 sm:w-3 sm:-translate-y-[7px] transition-all duration-300 focus:outline-none"></button>
+        <button type="button" data-index="1" class="h-2.5 w-2.5 rounded-full bg-gray-200 sm:h-3 sm:w-3 transition-all duration-300 focus:outline-none"></button>
+        <button type="button" data-index="2" class="h-2.5 w-2.5 rounded-full bg-gray-200 sm:h-3 sm:w-3 transition-all duration-300 focus:outline-none"></button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- --------------------------------END of Credits ------------------------------------------ -->
+<!-- --------------------------------START of Footer ------------------------------------------ -->
+<footer class="site-footer relative isolate overflow-hidden pt-20 text-right text-gray-500 sm:pt-24" dir="rtl">
+  <a href="#top" aria-label="العودة إلى أعلى الصفحة" class="absolute left-1/2 top-3 z-10 flex h-[54px] w-[54px] -translate-x-1/2 items-center justify-center rounded-full bg-[#16af94] text-white shadow-sm transition hover:-translate-y-1 hover:bg-brand">
+    <i class="fa-solid fa-chevron-up text-lg" aria-hidden="true"></i>
+  </a>
+
+  <div class="relative z-[1] mx-auto grid max-w-6xl gap-10 px-6 pb-12 sm:grid-cols-2 sm:px-10 lg:grid-cols-[1.7fr_1fr_1fr_1.45fr] lg:gap-12 lg:px-0 lg:pb-14">
+    <section class="lg:order-1" aria-labelledby="footer-about">
+      <h2 id="footer-about" class="relative inline-block pb-3 text-sm font-extrabold text-ink after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-4 after:bg-[repeating-linear-gradient(90deg,_#182373_0_4px,_transparent_4px_6px)]">تعرف علينا</h2>
+      <p class="mt-5 max-w-xl text-xs leading-7 text-gray-500">
+        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربي، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التي يولدها التطبيق.
+      </p>
+    </section>
+
+    <nav class="lg:order-2" aria-labelledby="footer-pages">
+      <h2 id="footer-pages" class="relative inline-block pb-3 text-sm font-extrabold text-ink after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-4 after:bg-[repeating-linear-gradient(90deg,_#182373_0_4px,_transparent_4px_6px)]">أقسام الموقع</h2>
+      <ul class="mt-5 space-y-2.5 text-xs leading-5">
+        <li><a class="font-bold text-brand transition hover:text-ink" href="#top">الرئيسية</a></li>
+        <li><a class="transition hover:text-brand" href="#about">من نحن</a></li>
+        <li><a class="transition hover:text-brand" href="#courses">الدورات</a></li>
+        <li><a class="transition hover:text-brand" href="#trainers">المدربين</a></li>
+        <li><a class="transition hover:text-brand" href="#blog">المدونة</a></li>
+        <li><a class="transition hover:text-brand" href="#contact">اتصل بنا</a></li>
+      </ul>
+    </nav>
+
+    <nav class="lg:order-3" aria-labelledby="footer-links">
+      <h2 id="footer-links" class="relative inline-block pb-3 text-sm font-extrabold text-ink after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-4 after:bg-[repeating-linear-gradient(90deg,_#182373_0_4px,_transparent_4px_6px)]">روابط هامة</h2>
+      <ul class="mt-5 space-y-2.5 text-xs leading-5">
+        <li><a class="transition hover:text-brand" href="#">الأسئلة الشائعة</a></li>
+        <li><a class="transition hover:text-brand" href="#">شروط الاستخدام</a></li>
+        <li><a class="transition hover:text-brand" href="#">القائمة السوداء</a></li>
+        <li><a class="transition hover:text-brand" href="#">وظائف</a></li>
+      </ul>
+    </nav>
+
+    <section class="lg:order-4" aria-labelledby="footer-contact">
+      <h2 id="footer-contact" class="relative inline-block pb-3 text-sm font-extrabold text-ink after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-4 after:bg-[repeating-linear-gradient(90deg,_#182373_0_4px,_transparent_4px_6px)]">تواصل معنا</h2>
+      <form class="mt-5 flex h-11 overflow-hidden rounded-full border border-gray-300 bg-white" action="#" method="post">
+        <button type="submit" class="order-2 w-20 shrink-0 bg-[#16af94] text-xs font-bold text-white transition hover:bg-ink">اشترك</button>
+        <label class="flex min-w-0 flex-1 items-center gap-2 px-3" for="footer-email">
+          <i class="fa-regular fa-envelope text-lg text-[#16af94]" aria-hidden="true"></i>
+          <input id="footer-email" name="email" type="email" placeholder="اكتب بريدك الإلكتروني" class="min-w-0 w-full border-0 bg-transparent text-center text-[10px] outline-none placeholder:text-gray-300" aria-label="البريد الإلكتروني">
+        </label>
+      </form>
+      <div class="mt-9 flex items-center justify-center gap-4" dir="ltr" aria-label="حسابات التواصل الاجتماعي">
+        <a href="#" aria-label="Twitter" class="flex h-9 w-9 items-center justify-center rounded-full bg-[#363786] text-white ring-4 ring-[#e1e2ec] transition hover:-translate-y-1 hover:bg-brand"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram" class="flex h-9 w-9 items-center justify-center rounded-full bg-[#363786] text-white ring-4 ring-[#e1e2ec] transition hover:-translate-y-1 hover:bg-brand"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn" class="flex h-9 w-9 items-center justify-center rounded-full bg-[#363786] text-white ring-4 ring-[#e1e2ec] transition hover:-translate-y-1 hover:bg-brand"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Facebook" class="flex h-9 w-9 items-center justify-center rounded-full bg-[#363786] text-white ring-4 ring-[#e1e2ec] transition hover:-translate-y-1 hover:bg-brand"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+    </section>
+  </div>
+</footer>
+<div class="w-full border-y border-[#18a9e5] bg-gradient-to-r from-[#22256e] via-[#1d647c] to-[#16a389]" dir="rtl">
+  <div class="mx-auto flex max-w-[1366px] flex-col items-center justify-center gap-1 px-4 py-3 text-center text-[11px] font-medium text-white sm:flex-row sm:justify-between sm:gap-0 sm:px-8 sm:py-0 sm:h-[60px] sm:text-xs sm:text-right md:text-sm">
+    <span>جميع الحقوق محفوظة لموقع ريشم بلس</span>
+    <span>تصميم وبرمجة سمارت فيجن</span>
+  </div>
+</div>
+<!-- --------------------------------END of Footer ------------------------------------------ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="script/profile.js"></script>
+</body>
+</html>
